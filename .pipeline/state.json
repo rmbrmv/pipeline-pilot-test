@@ -1,0 +1,79 @@
+{
+  "project_id": "test-pipeline-pilot",
+  "spec_path": "docs/superpowers/specs/2026-05-01-test-pipeline-pilot-design.md",
+  "feature_branch": "feature/pipeline-test-pipeline-pilot",
+  "journal_session_id": "a38885ea-2e1e-4d95-b5e1-e6ff95888e06",
+  "current_stage": "develop",
+  "stage_iteration": 0,
+  "codex_iteration": 2,
+  "started_at": "2026-05-03T18:05:00+03:00",
+  "last_event_at": "2026-05-03T18:28:05.133320",
+  "paused_until": null,
+  "paused_reason": null,
+  "open_question": null,
+  "pending_redirects": [],
+  "status": "running",
+  "budget": {
+    "total_input_tokens": 250000,
+    "expected": 200000,
+    "by_stage": {
+      "plan": {
+        "expected": 25000,
+        "max": 35000
+      },
+      "develop": {
+        "expected": 80000,
+        "max": 120000
+      },
+      "test": {
+        "expected": 40000,
+        "max": 60000
+      },
+      "release": {
+        "expected": 30000,
+        "max": 35000
+      }
+    },
+    "reasoning": "Base budget после M15 E2E pilot v1: subagent-overhead на любом\nсодержательном develop = десятки тысяч токенов даже для одной\nфункции (Explore inventory + code-reviewer + Codex review-loop по\n2-3 итерации). Plan/test/release аналогично. v2 базовый бюджет\n~5x от наивной оценки v1 спеки."
+  },
+  "models": {
+    "plan": {
+      "coordinator": "sonnet",
+      "subagents": {
+        "Explore": "sonnet",
+        "Plan": "opus",
+        "code-reviewer": "sonnet"
+      }
+    },
+    "develop": {
+      "coordinator": "sonnet",
+      "subagents": {
+        "general-purpose": "opus",
+        "code-reviewer": "sonnet"
+      }
+    },
+    "test": {
+      "coordinator": "sonnet",
+      "subagents": {
+        "code-reviewer": "opus",
+        "verification-before-completion": "sonnet"
+      }
+    },
+    "release": {
+      "coordinator": "sonnet",
+      "subagents": {
+        "general-purpose": "sonnet"
+      }
+    }
+  },
+  "release": {
+    "manual_merge": false,
+    "obsidian_note": true
+  },
+  "tokens_used": {
+    "plan": 28500,
+    "develop": 0,
+    "test": 0,
+    "release": 0
+  }
+}
