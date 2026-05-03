@@ -7,3 +7,4 @@
 {"ts":"2026-05-03T18:28:16.095325","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
 {"ts":"2026-05-03T18:28:22.496095","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
 {"ts":"2026-05-03T18:28:28.873907","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
+{"ts":"2026-05-03T18:28:35.298047","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
