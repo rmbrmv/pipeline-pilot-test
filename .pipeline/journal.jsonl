@@ -27,3 +27,4 @@
 {"ts":"2026-05-03T18:30:24.320202","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
 {"ts":"2026-05-03T18:30:30.728276","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
 {"ts":"2026-05-03T18:30:37.092949","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
+{"ts":"2026-05-03T18:30:43.586912","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
