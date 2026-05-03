@@ -48,26 +48,27 @@ pipeline-pilot-test/
 
 ```yaml
 budget:
-  total_input_tokens: 50000   # 50K — щедро для одной функции и одного теста
-  expected: 35000
+  total_input_tokens: 250000   # реалистично для subagent-driven workflow на минимальном проекте (M15 E2E pilot 2026-05-03 показал ~67K на одном develop'е)
+  expected: 200000
   by_stage:
     plan:
-      expected: 8000
-      max: 12000
+      expected: 25000
+      max: 35000
     develop:
-      expected: 12000
-      max: 18000
+      expected: 80000
+      max: 120000
     test:
-      expected: 8000
-      max: 12000
+      expected: 40000
+      max: 60000
     release:
-      expected: 7000
-      max: 8000
+      expected: 30000
+      max: 35000
   reasoning: |
-    Минимальный pilot: 1 функция, 1 тест, 1 PR. План ~8K (короткий),
-    разработка ~12K (микро-код), тестирование ~8K (запуск pytest +
-    Codex iter), релиз ~7K (PR + knowledge-нота не нужна для тестового
-    репо — формальный pipeline_done).
+    Base budget после M15 E2E pilot v1: subagent-overhead на любом
+    содержательном develop = десятки тысяч токенов даже для одной
+    функции (Explore inventory + code-reviewer + Codex review-loop по
+    2-3 итерации). Plan/test/release аналогично. v2 базовый бюджет
+    ~5x от наивной оценки v1 спеки.
 ```
 
 ## Out of scope
