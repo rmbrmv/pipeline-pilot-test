@@ -2,3 +2,6 @@
 {"ts":"2026-05-03T18:18:05.120042","type":"budget_warn","payload":{"stage":"plan","used":28500,"expected":25000,"soft_stop":true,"timeout_s":600}}
 {"ts":"2026-05-03T18:28:05.130284","type":"resumed_after_pause","payload":{"reason":"soft_stop_timeout_default_continue"}}
 {"ts":"2026-05-03T18:28:05.133366","type":"stage_done","payload":{"stage":"plan","exit_code":0,"json":{"status":"plan_ready","path":"docs/superpowers/plans/2026-05-03-test-pipeline-pilot.md","tokens_used":28500,"codex_iterations":2},"next_status":"running"}}
+{"ts":"2026-05-03T18:28:12.775263","type":"catastrophic","payload":{"context":"persist_and_push_state","error":"git commit -m [pipeline] stage plan running failed: ","attempts":3}}
+{"ts":"2026-05-03T18:28:12.782821","type":"stage_start","payload":{"stage":"develop","expected_k":80}}
+{"ts":"2026-05-03T18:28:16.095325","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
