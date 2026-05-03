@@ -44,3 +44,6 @@
 {"ts":"2026-05-03T18:32:13.413287","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
 {"ts":"2026-05-03T18:32:19.815991","type":"restart_recovered","payload":{"context":"resync_unpushed_after_failure"}}
 {"ts": "2026-05-03T18:32:29", "type": "test_pass", "payload": {"suite": "pytest", "result": "1 passed", "stage": "test"}}
+{"ts": "2026-05-03T18:32:46", "type": "stage_end", "payload": {"stage": "test"}}
+{"ts": "2026-05-03T18:32:46", "type": "stage_start", "payload": {"stage": "release", "expected_k": 30}}
+{"ts": "2026-05-03T18:32:54", "type": "pipeline_complete", "payload": {"status": "success"}}
